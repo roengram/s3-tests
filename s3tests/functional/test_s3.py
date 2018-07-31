@@ -5446,7 +5446,7 @@ def test_multipart_copy_without_range():
     # MultiPartUpload.copy_part_from_key() always add "x-amz-copy-source-range" in header
     # So we can use copy_key() with query_args
     query_args = 'uploadId=%s&partNumber=%d' % (upload.id, 1)
-    dst_bucket.copy_key(dst_keyname, src_bucket.name, src_key.name, query_args=query_args)
+    dst_bucket.copy_key(dst_keyname, src_bucket.name, src_key.name, storage_class='', query_args=query_args)
     upload.complete_upload()
 
     key2 = dst_bucket.get_key(dst_keyname)
