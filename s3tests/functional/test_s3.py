@@ -4791,6 +4791,7 @@ def test_access_bucket_publicreadwrite_object_publicreadwrite():
     obj.new.set_contents_from_string('newcontent')
 
 @attr(resource='object')
+@attr('ACLs')
 @attr(method='put')
 @attr(operation='set object acls')
 @attr(assertion='valid XML ACL sets properly')
@@ -4802,6 +4803,7 @@ def test_object_set_valid_acl():
     key.set_xml_acl(XML_1)
 
 @attr(resource='object')
+@attr('ACLs')
 @attr(method='put')
 @attr(operation='set object acls')
 @attr(assertion='invalid XML ACL fails 403')
