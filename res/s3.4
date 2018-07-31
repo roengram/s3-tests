@@ -1,0 +1,1407 @@
+....................................................................................................SSSS..........FF.F.............F.............E.............................F......SSSS......F.F.....EE..
+======================================================================
+ERROR: s3tests.functional.test_s3.test_multipart_copy_without_range
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 5416, in test_multipart_copy_without_range
+    dst_bucket.copy_key(dst_keyname, src_bucket.name, src_key.name, query_args=query_args)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/bucket.py", line 890, in copy_key
+    response.reason, body)
+S3ResponseError: S3ResponseError: 400 Bad Request
+<Error><Code>InvalidArgument</Code><Message>The specified header is not valid in this context</Message><ArgumentName>x-amz-storage-class</ArgumentName><ArgumentValue>STANDARD</ArgumentValue><RequestId>A2E2E908BDD12CB3</RequestId><HostId>LzHfKD5HFnLTpGn0y+z9rq505L23ZuRwlvkdAbryM6aRnSyIcwetrVMcUzCzMbrML9/PVLfI0bQ=</HostId></Error>
+-------------------- >> begin captured logging << --------------------
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-144/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-144/
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-144/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:28:29 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-144/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:5/qhXi13elhnzk6ufg/TB4Bz3v8=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:28:29 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:5/qhXi13elhnzk6ufg/TB4Bz3v8=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', 'jWKbcYwTw/2ItRHEXcUraJZlKuLnZhiKIWhlpQwxdJSQwi3m3IUOZw10ER+HHBuPCnZ2nJ3xpEg='), ('server', 'AmazonS3'), ('x-amz-request-id', 'BE78E3657FECE9C0'), ('location', '/jaehoon13-60eyqptpby3fxxs10vr-144'), ('date', 'Thu, 26 Jul 2018 10:28:31 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-144/source
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-144/source
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-144/source
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'Content-Length': '10', 'Content-MD5': u'co9lpouCrGZgA+4/hABd9w==', 'Content-Type': 'application/octet-stream', 'Expect': '100-Continue', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+co9lpouCrGZgA+4/hABd9w==
+application/octet-stream
+Thu, 26 Jul 2018 10:28:30 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-144/source
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:MRpyO0fdfx7bkMjyaY7Qa60UGQQ=
+boto: DEBUG: Final headers: {'Content-Length': '10', 'Content-MD5': 'co9lpouCrGZgA+4/hABd9w==', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 10:28:30 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:MRpyO0fdfx7bkMjyaY7Qa60UGQQ='}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', 'bEN0c0i84ejUDxI0H8tY2lFL9dCZZZx5HnTx2UDm1gME9T/u0mxdVo9ycLwy/jT1JPm0G+lB2GQ='), ('server', 'AmazonS3'), ('x-amz-request-id', 'DDE6EAA4B0F7D0DF'), ('etag', '"728f65a68b82ac666003ee3f84005df7"'), ('date', 'Thu, 26 Jul 2018 10:28:31 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-145/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-145/
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-145/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:28:31 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-145/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:wPHyoCSWk6eFnWrZFo9NVv9Fzg0=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:28:31 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:wPHyoCSWk6eFnWrZFo9NVv9Fzg0=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', 'u3wzrcZ+JNmdtcSz3+aAYQwyq6oSr5HnHyPFc56VP5v0PcbbLDJVNLIG0rNtzaCgK5kuHCc3Lcs='), ('server', 'AmazonS3'), ('x-amz-request-id', '7D24345D56F9BE0F'), ('location', '/jaehoon13-60eyqptpby3fxxs10vr-145'), ('date', 'Thu, 26 Jul 2018 10:28:32 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-145/mymultipartcopy
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-145/mymultipartcopy
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-145/mymultipartcopy?uploads
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-145/mymultipartcopy?uploads
+boto: DEBUG: Method: POST
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-145/mymultipartcopy?uploads
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+POST
+
+
+Thu, 26 Jul 2018 10:28:31 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-145/mymultipartcopy?uploads
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:RwGvgaoxuIf+C/h0bOLDo5cyJHQ=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:28:31 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:RwGvgaoxuIf+C/h0bOLDo5cyJHQ=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('x-amz-id-2', '7fisjWqdxMeHmwnsjx7ougGXu6NTF5/Ga2vla5jQHOtUp0y3T/ydfTXw+kZyHBq779OyKBo2ug0='), ('date', 'Thu, 26 Jul 2018 10:28:32 GMT'), ('transfer-encoding', 'chunked'), ('x-amz-request-id', '29760BE3061093B4'), ('server', 'AmazonS3')]
+boto: DEBUG: <?xml version="1.0" encoding="UTF-8"?>
+<InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>jaehoon13-60eyqptpby3fxxs10vr-145</Bucket><Key>mymultipartcopy</Key><UploadId>Evivvb8Ih.j_U0eg5fjgQ7aypJj7oV2m03Zrtxd6faqAa7Er.PQ2PaRN943Ij35r6g2FWlTz9EGXsLEf2TSbgiveZAQIaA3QFYH3BxK22FNRYtotQOa7dq07E.zD5CSJ</UploadId></InitiateMultipartUploadResult>
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-145/mymultipartcopy
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-145/mymultipartcopy
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-145/mymultipartcopy?uploadId=Evivvb8Ih.j_U0eg5fjgQ7aypJj7oV2m03Zrtxd6faqAa7Er.PQ2PaRN943Ij35r6g2FWlTz9EGXsLEf2TSbgiveZAQIaA3QFYH3BxK22FNRYtotQOa7dq07E.zD5CSJ&partNumber=1
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-145/mymultipartcopy?uploadId=Evivvb8Ih.j_U0eg5fjgQ7aypJj7oV2m03Zrtxd6faqAa7Er.PQ2PaRN943Ij35r6g2FWlTz9EGXsLEf2TSbgiveZAQIaA3QFYH3BxK22FNRYtotQOa7dq07E.zD5CSJ&partNumber=1
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-145/mymultipartcopy?uploadId=Evivvb8Ih.j_U0eg5fjgQ7aypJj7oV2m03Zrtxd6faqAa7Er.PQ2PaRN943Ij35r6g2FWlTz9EGXsLEf2TSbgiveZAQIaA3QFYH3BxK22FNRYtotQOa7dq07E.zD5CSJ&partNumber=1
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'x-amz-copy-source': 'jaehoon13-60eyqptpby3fxxs10vr-144/source', 'x-amz-storage-class': 'STANDARD'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:28:31 GMT
+x-amz-copy-source:jaehoon13-60eyqptpby3fxxs10vr-144/source
+x-amz-storage-class:STANDARD
+/jaehoon13-60eyqptpby3fxxs10vr-145/mymultipartcopy?partNumber=1&uploadId=Evivvb8Ih.j_U0eg5fjgQ7aypJj7oV2m03Zrtxd6faqAa7Er.PQ2PaRN943Ij35r6g2FWlTz9EGXsLEf2TSbgiveZAQIaA3QFYH3BxK22FNRYtotQOa7dq07E.zD5CSJ
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:VgO/zrpgQ+6oU63gpHXblWrw4vs=
+boto: DEBUG: Final headers: {'Content-Length': '0', 'x-amz-storage-class': 'STANDARD', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'x-amz-copy-source': 'jaehoon13-60eyqptpby3fxxs10vr-144/source', 'Date': 'Thu, 26 Jul 2018 10:28:31 GMT', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:VgO/zrpgQ+6oU63gpHXblWrw4vs='}
+boto: DEBUG: Response headers: [('x-amz-id-2', 'LzHfKD5HFnLTpGn0y+z9rq505L23ZuRwlvkdAbryM6aRnSyIcwetrVMcUzCzMbrML9/PVLfI0bQ='), ('server', 'AmazonS3'), ('transfer-encoding', 'chunked'), ('connection', 'close'), ('x-amz-request-id', 'A2E2E908BDD12CB3'), ('date', 'Thu, 26 Jul 2018 10:28:31 GMT'), ('content-type', 'application/xml')]
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: s3tests.functional.test_s3.test_encryption_sse_c_multipart_invalid_chunks_1
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 8366, in test_encryption_sse_c_multipart_invalid_chunks_1
+    metadata={'foo': 'bar'})
+  File "/home/roengram/s3-tests/s3tests/functional/utils.py", line 13, in assert_raises
+    callableObj(*args, **kwargs)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 8281, in _multipart_upload_enc
+    transfer_part(bucket, upload.id, upload.key_name, i, part, part_headers)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 5269, in transfer_part
+    mp.upload_part_from_file(part_out, i+1, headers=headers)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/multipart.py", line 260, in upload_part_from_file
+    query_args=query_args, size=size)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/key.py", line 1309, in set_contents_from_file
+    chunked_transfer=chunked_transfer, size=size)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/key.py", line 762, in send_file
+    chunked_transfer=chunked_transfer, size=size)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/key.py", line 963, in _send_file_internal
+    query_args=query_args
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/connection.py", line 671, in make_request
+    retry_handler=retry_handler
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/connection.py", line 1071, in make_request
+    retry_handler=retry_handler)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/connection.py", line 1030, in _mexe
+    raise ex
+error: [Errno 104] Connection reset by peer
+-------------------- >> begin captured logging << --------------------
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-199/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-199/
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-199/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 11:04:27 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-199/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:dPAftA2ZhG0v3DgfbjXmjfck+uQ=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 11:04:27 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:dPAftA2ZhG0v3DgfbjXmjfck+uQ=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: encountered BadStatusLine exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 11:04:27 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-199/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:dPAftA2ZhG0v3DgfbjXmjfck+uQ=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 11:04:27 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:dPAftA2ZhG0v3DgfbjXmjfck+uQ=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', 'lw0q3U7oVOUmXKqGEM6JY5r1jD4FoSkTjJGXTTXB4RkTkdHvnL8J5lDuYW0VuFT32QKBh8+poL4='), ('server', 'AmazonS3'), ('x-amz-request-id', 'B11E16BF5E203455'), ('location', '/jaehoon13-60eyqptpby3fxxs10vr-199'), ('date', 'Thu, 26 Jul 2018 11:04:30 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?uploads
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?uploads
+boto: DEBUG: Method: POST
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?uploads
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'x-amz-server-side-encryption-customer-key-md5': 'DWygnHRtgiJ77HCm+1rvHw==', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Content-Type': 'text/bla', 'x-amz-meta-foo': 'bar'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+POST
+
+text/bla
+Thu, 26 Jul 2018 11:04:29 GMT
+x-amz-meta-foo:bar
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:DWygnHRtgiJ77HCm+1rvHw==
+/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?uploads
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:yJiYz/NqcmDbCiZEy8wGidC3Rq4=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'DWygnHRtgiJ77HCm+1rvHw==', 'Content-Length': '0', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:yJiYz/NqcmDbCiZEy8wGidC3Rq4=', 'Date': 'Thu, 26 Jul 2018 11:04:29 GMT', 'Content-Type': 'text/bla', 'x-amz-meta-foo': 'bar'}
+boto: DEBUG: encountered BadStatusLine exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+POST
+
+text/bla
+Thu, 26 Jul 2018 11:04:29 GMT
+x-amz-meta-foo:bar
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:DWygnHRtgiJ77HCm+1rvHw==
+/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?uploads
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:yJiYz/NqcmDbCiZEy8wGidC3Rq4=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'DWygnHRtgiJ77HCm+1rvHw==', 'Content-Length': '0', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:yJiYz/NqcmDbCiZEy8wGidC3Rq4=', 'Date': 'Thu, 26 Jul 2018 11:04:29 GMT', 'Content-Type': 'text/bla', 'x-amz-meta-foo': 'bar'}
+boto: DEBUG: Response headers: [('x-amz-server-side-encryption-customer-key-md5', 'DWygnHRtgiJ77HCm+1rvHw=='), ('x-amz-server-side-encryption-customer-algorithm', 'AES256'), ('x-amz-id-2', '/ZbOeuuTbgIFMBLL748aatfSkgUUQTMc2QkvCrD/6gdq0O3y9XMG/7DPbhKaldupRg9iNueCbbU='), ('server', 'AmazonS3'), ('transfer-encoding', 'chunked'), ('x-amz-request-id', 'E1D42B9EA3169982'), ('date', 'Thu, 26 Jul 2018 11:04:31 GMT')]
+boto: DEBUG: <?xml version="1.0" encoding="UTF-8"?>
+<InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>jaehoon13-60eyqptpby3fxxs10vr-199</Bucket><Key>multipart_enc</Key><UploadId>cV1jN7Qjag15pZmK.Ty4uj1p6.pw4dgXmAD12y4IvantbGIHcvwXKjwn5gav7.zkXOC83_46xDeX1NbD0q4Xe5FhX.809BwhUCaXYYFxFIkKSf5nBV6zKFdzGVqMXpC4</UploadId></InitiateMultipartUploadResult>
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?uploadId=cV1jN7Qjag15pZmK.Ty4uj1p6.pw4dgXmAD12y4IvantbGIHcvwXKjwn5gav7.zkXOC83_46xDeX1NbD0q4Xe5FhX.809BwhUCaXYYFxFIkKSf5nBV6zKFdzGVqMXpC4&partNumber=1
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?uploadId=cV1jN7Qjag15pZmK.Ty4uj1p6.pw4dgXmAD12y4IvantbGIHcvwXKjwn5gav7.zkXOC83_46xDeX1NbD0q4Xe5FhX.809BwhUCaXYYFxFIkKSf5nBV6zKFdzGVqMXpC4&partNumber=1
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?uploadId=cV1jN7Qjag15pZmK.Ty4uj1p6.pw4dgXmAD12y4IvantbGIHcvwXKjwn5gav7.zkXOC83_46xDeX1NbD0q4Xe5FhX.809BwhUCaXYYFxFIkKSf5nBV6zKFdzGVqMXpC4&partNumber=1
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'x-amz-server-side-encryption-customer-key-md5': 'arxBvwY2V4SiOne6yppVPQ==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': u'Q2a1mc9DcV0yOs+7WP1gGA==', 'x-amz-server-side-encryption-customer-key': '6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=', 'Expect': '100-Continue', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+Q2a1mc9DcV0yOs+7WP1gGA==
+application/octet-stream
+Thu, 26 Jul 2018 11:04:30 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=
+x-amz-server-side-encryption-customer-key-md5:arxBvwY2V4SiOne6yppVPQ==
+/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?partNumber=1&uploadId=cV1jN7Qjag15pZmK.Ty4uj1p6.pw4dgXmAD12y4IvantbGIHcvwXKjwn5gav7.zkXOC83_46xDeX1NbD0q4Xe5FhX.809BwhUCaXYYFxFIkKSf5nBV6zKFdzGVqMXpC4
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'arxBvwY2V4SiOne6yppVPQ==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'Q2a1mc9DcV0yOs+7WP1gGA==', 'x-amz-server-side-encryption-customer-key': '6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:04:30 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+Q2a1mc9DcV0yOs+7WP1gGA==
+application/octet-stream
+Thu, 26 Jul 2018 11:04:30 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=
+x-amz-server-side-encryption-customer-key-md5:arxBvwY2V4SiOne6yppVPQ==
+/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?partNumber=1&uploadId=cV1jN7Qjag15pZmK.Ty4uj1p6.pw4dgXmAD12y4IvantbGIHcvwXKjwn5gav7.zkXOC83_46xDeX1NbD0q4Xe5FhX.809BwhUCaXYYFxFIkKSf5nBV6zKFdzGVqMXpC4
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'arxBvwY2V4SiOne6yppVPQ==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'Q2a1mc9DcV0yOs+7WP1gGA==', 'x-amz-server-side-encryption-customer-key': '6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:04:30 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+Q2a1mc9DcV0yOs+7WP1gGA==
+application/octet-stream
+Thu, 26 Jul 2018 11:04:30 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=
+x-amz-server-side-encryption-customer-key-md5:arxBvwY2V4SiOne6yppVPQ==
+/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?partNumber=1&uploadId=cV1jN7Qjag15pZmK.Ty4uj1p6.pw4dgXmAD12y4IvantbGIHcvwXKjwn5gav7.zkXOC83_46xDeX1NbD0q4Xe5FhX.809BwhUCaXYYFxFIkKSf5nBV6zKFdzGVqMXpC4
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'arxBvwY2V4SiOne6yppVPQ==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'Q2a1mc9DcV0yOs+7WP1gGA==', 'x-amz-server-side-encryption-customer-key': '6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:04:30 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+Q2a1mc9DcV0yOs+7WP1gGA==
+application/octet-stream
+Thu, 26 Jul 2018 11:04:30 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=
+x-amz-server-side-encryption-customer-key-md5:arxBvwY2V4SiOne6yppVPQ==
+/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?partNumber=1&uploadId=cV1jN7Qjag15pZmK.Ty4uj1p6.pw4dgXmAD12y4IvantbGIHcvwXKjwn5gav7.zkXOC83_46xDeX1NbD0q4Xe5FhX.809BwhUCaXYYFxFIkKSf5nBV6zKFdzGVqMXpC4
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'arxBvwY2V4SiOne6yppVPQ==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'Q2a1mc9DcV0yOs+7WP1gGA==', 'x-amz-server-side-encryption-customer-key': '6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:04:30 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+Q2a1mc9DcV0yOs+7WP1gGA==
+application/octet-stream
+Thu, 26 Jul 2018 11:04:30 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=
+x-amz-server-side-encryption-customer-key-md5:arxBvwY2V4SiOne6yppVPQ==
+/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?partNumber=1&uploadId=cV1jN7Qjag15pZmK.Ty4uj1p6.pw4dgXmAD12y4IvantbGIHcvwXKjwn5gav7.zkXOC83_46xDeX1NbD0q4Xe5FhX.809BwhUCaXYYFxFIkKSf5nBV6zKFdzGVqMXpC4
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'arxBvwY2V4SiOne6yppVPQ==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'Q2a1mc9DcV0yOs+7WP1gGA==', 'x-amz-server-side-encryption-customer-key': '6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:04:30 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+Q2a1mc9DcV0yOs+7WP1gGA==
+application/octet-stream
+Thu, 26 Jul 2018 11:04:30 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=
+x-amz-server-side-encryption-customer-key-md5:arxBvwY2V4SiOne6yppVPQ==
+/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?partNumber=1&uploadId=cV1jN7Qjag15pZmK.Ty4uj1p6.pw4dgXmAD12y4IvantbGIHcvwXKjwn5gav7.zkXOC83_46xDeX1NbD0q4Xe5FhX.809BwhUCaXYYFxFIkKSf5nBV6zKFdzGVqMXpC4
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'arxBvwY2V4SiOne6yppVPQ==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'Q2a1mc9DcV0yOs+7WP1gGA==', 'x-amz-server-side-encryption-customer-key': '6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:04:30 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+Q2a1mc9DcV0yOs+7WP1gGA==
+application/octet-stream
+Thu, 26 Jul 2018 11:04:30 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=
+x-amz-server-side-encryption-customer-key-md5:arxBvwY2V4SiOne6yppVPQ==
+/jaehoon13-60eyqptpby3fxxs10vr-199/multipart_enc?partNumber=1&uploadId=cV1jN7Qjag15pZmK.Ty4uj1p6.pw4dgXmAD12y4IvantbGIHcvwXKjwn5gav7.zkXOC83_46xDeX1NbD0q4Xe5FhX.809BwhUCaXYYFxFIkKSf5nBV6zKFdzGVqMXpC4
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'arxBvwY2V4SiOne6yppVPQ==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'Q2a1mc9DcV0yOs+7WP1gGA==', 'x-amz-server-side-encryption-customer-key': '6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:04:30 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:H87kFblZMDwk4FVyit+ZAjFIPs0='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: s3tests.functional.test_s3.test_encryption_sse_c_multipart_invalid_chunks_2
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 8394, in test_encryption_sse_c_multipart_invalid_chunks_2
+    metadata={'foo': 'bar'})
+  File "/home/roengram/s3-tests/s3tests/functional/utils.py", line 13, in assert_raises
+    callableObj(*args, **kwargs)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 8281, in _multipart_upload_enc
+    transfer_part(bucket, upload.id, upload.key_name, i, part, part_headers)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 5269, in transfer_part
+    mp.upload_part_from_file(part_out, i+1, headers=headers)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/multipart.py", line 260, in upload_part_from_file
+    query_args=query_args, size=size)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/key.py", line 1309, in set_contents_from_file
+    chunked_transfer=chunked_transfer, size=size)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/key.py", line 762, in send_file
+    chunked_transfer=chunked_transfer, size=size)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/key.py", line 963, in _send_file_internal
+    query_args=query_args
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/connection.py", line 671, in make_request
+    retry_handler=retry_handler
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/connection.py", line 1071, in make_request
+    retry_handler=retry_handler)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/connection.py", line 1030, in _mexe
+    raise ex
+error: [Errno 104] Connection reset by peer
+-------------------- >> begin captured logging << --------------------
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-200/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-200/
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-200/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 11:05:46 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-200/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:LXGCNEB5qwA4dkvN44T0zJvViOU=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 11:05:46 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:LXGCNEB5qwA4dkvN44T0zJvViOU=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', 'cPPAJrJpeGT1QIGm6UokJyy1XQrEyr4v7u24J1J1rWc8WSgW2h0S4lV0p5WEixBwWqoZqI3xBf0='), ('server', 'AmazonS3'), ('x-amz-request-id', '04E5B7FD86212343'), ('location', '/jaehoon13-60eyqptpby3fxxs10vr-200'), ('date', 'Thu, 26 Jul 2018 11:05:48 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?uploads
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?uploads
+boto: DEBUG: Method: POST
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?uploads
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'x-amz-server-side-encryption-customer-key-md5': 'DWygnHRtgiJ77HCm+1rvHw==', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Content-Type': 'text/plain', 'x-amz-meta-foo': 'bar'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+POST
+
+text/plain
+Thu, 26 Jul 2018 11:05:47 GMT
+x-amz-meta-foo:bar
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:DWygnHRtgiJ77HCm+1rvHw==
+/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?uploads
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:pKgg6D/CvmX72zzS5rbsP9YlfbQ=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'DWygnHRtgiJ77HCm+1rvHw==', 'Content-Length': '0', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:pKgg6D/CvmX72zzS5rbsP9YlfbQ=', 'Date': 'Thu, 26 Jul 2018 11:05:47 GMT', 'Content-Type': 'text/plain', 'x-amz-meta-foo': 'bar'}
+boto: DEBUG: Response headers: [('x-amz-server-side-encryption-customer-key-md5', 'DWygnHRtgiJ77HCm+1rvHw=='), ('x-amz-server-side-encryption-customer-algorithm', 'AES256'), ('x-amz-id-2', '52jmcg+srysbKMrtYUd0phmVweP5XFDaj8HHjMlziwI/GHTEVnyD9LyBNG8LskftxWo1ZoFDc4w='), ('server', 'AmazonS3'), ('transfer-encoding', 'chunked'), ('x-amz-request-id', '0BB84CF10D1124F1'), ('date', 'Thu, 26 Jul 2018 11:05:49 GMT')]
+boto: DEBUG: <?xml version="1.0" encoding="UTF-8"?>
+<InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>jaehoon13-60eyqptpby3fxxs10vr-200</Bucket><Key>multipart_enc</Key><UploadId>eYYet5aL7cfYIEkN2bNdYBJx0.P1BdpiNEfAj6_soSGmCaTNadlk3K0V6GH1N3qil8ku83ggWbxrVcTTbBSTJFTri5_b6O8hAXZPtbeLAje4ajEz5HCH0aq4O.liYdHq</UploadId></InitiateMultipartUploadResult>
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?uploadId=eYYet5aL7cfYIEkN2bNdYBJx0.P1BdpiNEfAj6_soSGmCaTNadlk3K0V6GH1N3qil8ku83ggWbxrVcTTbBSTJFTri5_b6O8hAXZPtbeLAje4ajEz5HCH0aq4O.liYdHq&partNumber=1
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?uploadId=eYYet5aL7cfYIEkN2bNdYBJx0.P1BdpiNEfAj6_soSGmCaTNadlk3K0V6GH1N3qil8ku83ggWbxrVcTTbBSTJFTri5_b6O8hAXZPtbeLAje4ajEz5HCH0aq4O.liYdHq&partNumber=1
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?uploadId=eYYet5aL7cfYIEkN2bNdYBJx0.P1BdpiNEfAj6_soSGmCaTNadlk3K0V6GH1N3qil8ku83ggWbxrVcTTbBSTJFTri5_b6O8hAXZPtbeLAje4ajEz5HCH0aq4O.liYdHq&partNumber=1
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'x-amz-server-side-encryption-customer-key-md5': 'AAAAAAAAAAAAAAAAAAAAAA==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': u'OGsqhDpdBNBipUeYZWt99Q==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+OGsqhDpdBNBipUeYZWt99Q==
+application/octet-stream
+Thu, 26 Jul 2018 11:05:48 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:AAAAAAAAAAAAAAAAAAAAAA==
+/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?partNumber=1&uploadId=eYYet5aL7cfYIEkN2bNdYBJx0.P1BdpiNEfAj6_soSGmCaTNadlk3K0V6GH1N3qil8ku83ggWbxrVcTTbBSTJFTri5_b6O8hAXZPtbeLAje4ajEz5HCH0aq4O.liYdHq
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'AAAAAAAAAAAAAAAAAAAAAA==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'OGsqhDpdBNBipUeYZWt99Q==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:05:48 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+OGsqhDpdBNBipUeYZWt99Q==
+application/octet-stream
+Thu, 26 Jul 2018 11:05:48 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:AAAAAAAAAAAAAAAAAAAAAA==
+/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?partNumber=1&uploadId=eYYet5aL7cfYIEkN2bNdYBJx0.P1BdpiNEfAj6_soSGmCaTNadlk3K0V6GH1N3qil8ku83ggWbxrVcTTbBSTJFTri5_b6O8hAXZPtbeLAje4ajEz5HCH0aq4O.liYdHq
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'AAAAAAAAAAAAAAAAAAAAAA==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'OGsqhDpdBNBipUeYZWt99Q==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:05:48 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+OGsqhDpdBNBipUeYZWt99Q==
+application/octet-stream
+Thu, 26 Jul 2018 11:05:48 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:AAAAAAAAAAAAAAAAAAAAAA==
+/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?partNumber=1&uploadId=eYYet5aL7cfYIEkN2bNdYBJx0.P1BdpiNEfAj6_soSGmCaTNadlk3K0V6GH1N3qil8ku83ggWbxrVcTTbBSTJFTri5_b6O8hAXZPtbeLAje4ajEz5HCH0aq4O.liYdHq
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'AAAAAAAAAAAAAAAAAAAAAA==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'OGsqhDpdBNBipUeYZWt99Q==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:05:48 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+OGsqhDpdBNBipUeYZWt99Q==
+application/octet-stream
+Thu, 26 Jul 2018 11:05:48 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:AAAAAAAAAAAAAAAAAAAAAA==
+/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?partNumber=1&uploadId=eYYet5aL7cfYIEkN2bNdYBJx0.P1BdpiNEfAj6_soSGmCaTNadlk3K0V6GH1N3qil8ku83ggWbxrVcTTbBSTJFTri5_b6O8hAXZPtbeLAje4ajEz5HCH0aq4O.liYdHq
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'AAAAAAAAAAAAAAAAAAAAAA==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'OGsqhDpdBNBipUeYZWt99Q==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:05:48 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+OGsqhDpdBNBipUeYZWt99Q==
+application/octet-stream
+Thu, 26 Jul 2018 11:05:48 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:AAAAAAAAAAAAAAAAAAAAAA==
+/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?partNumber=1&uploadId=eYYet5aL7cfYIEkN2bNdYBJx0.P1BdpiNEfAj6_soSGmCaTNadlk3K0V6GH1N3qil8ku83ggWbxrVcTTbBSTJFTri5_b6O8hAXZPtbeLAje4ajEz5HCH0aq4O.liYdHq
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'AAAAAAAAAAAAAAAAAAAAAA==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'OGsqhDpdBNBipUeYZWt99Q==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:05:48 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+OGsqhDpdBNBipUeYZWt99Q==
+application/octet-stream
+Thu, 26 Jul 2018 11:05:48 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:AAAAAAAAAAAAAAAAAAAAAA==
+/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?partNumber=1&uploadId=eYYet5aL7cfYIEkN2bNdYBJx0.P1BdpiNEfAj6_soSGmCaTNadlk3K0V6GH1N3qil8ku83ggWbxrVcTTbBSTJFTri5_b6O8hAXZPtbeLAje4ajEz5HCH0aq4O.liYdHq
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'AAAAAAAAAAAAAAAAAAAAAA==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'OGsqhDpdBNBipUeYZWt99Q==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:05:48 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+OGsqhDpdBNBipUeYZWt99Q==
+application/octet-stream
+Thu, 26 Jul 2018 11:05:48 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:AAAAAAAAAAAAAAAAAAAAAA==
+/jaehoon13-60eyqptpby3fxxs10vr-200/multipart_enc?partNumber=1&uploadId=eYYet5aL7cfYIEkN2bNdYBJx0.P1BdpiNEfAj6_soSGmCaTNadlk3K0V6GH1N3qil8ku83ggWbxrVcTTbBSTJFTri5_b6O8hAXZPtbeLAje4ajEz5HCH0aq4O.liYdHq
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'AAAAAAAAAAAAAAAAAAAAAA==', 'Content-Length': '5242880', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'OGsqhDpdBNBipUeYZWt99Q==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 11:05:48 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:8FWIPFSMycPTmex32022B9h3NtM='}
+boto: DEBUG: encountered error exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+FAIL: s3tests.functional.test_s3.test_bucket_create_exists_nonowner
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 3435, in test_bucket_create_exists_nonowner
+    e = assert_raises(boto.exception.S3CreateError, get_new_bucket, targets.alt.default, bucket.name)
+  File "/home/roengram/s3-tests/s3tests/functional/utils.py", line 21, in assert_raises
+    raise AssertionError("%s not raised" % excName)
+AssertionError: S3CreateError not raised
+-------------------- >> begin captured logging << --------------------
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-108/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-108/
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-108/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:26:57 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-108/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:bg2nAEioIwtb94cValO/wkrOMVc=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:26:57 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:bg2nAEioIwtb94cValO/wkrOMVc=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', 'H5CGsi7RSXAHVrBBqp7vOUiAwcq/JllRoFMIjNxUq9tA7fEiJ8xhKhLcefe3MSwAQiT8YtpYD6Y='), ('server', 'AmazonS3'), ('x-amz-request-id', '8E061EB6B882D154'), ('location', '/jaehoon13-60eyqptpby3fxxs10vr-108'), ('date', 'Thu, 26 Jul 2018 10:26:58 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-108/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-108/
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-108/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:26:58 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-108/
+boto: DEBUG: Signature:
+AWS AKIAIKY5BKYZHAP6GPPQ:RHkZ7/TLJHWJ37vJOIU/g4hSBSM=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:26:58 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAIKY5BKYZHAP6GPPQ:RHkZ7/TLJHWJ37vJOIU/g4hSBSM=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', 'zJA+PMmEAjfizJ4IsK0CyRWra7+CSrR7BtkEOt/crCJw1YR7tTqld/TGh0elYrzFQ2XEb3Txfj0='), ('server', 'AmazonS3'), ('x-amz-request-id', '858005875A8FC1CD'), ('location', '/jaehoon13-60eyqptpby3fxxs10vr-108'), ('date', 'Thu, 26 Jul 2018 10:26:59 GMT')]
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+FAIL: s3tests.functional.test_s3.test_bucket_delete_nonowner
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 3447, in test_bucket_delete_nonowner
+    check_access_denied(s3.alt.delete_bucket, bucket.name)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 77, in check_access_denied
+    e = assert_raises(boto.exception.S3ResponseError, fn, *args, **kwargs)
+  File "/home/roengram/s3-tests/s3tests/functional/utils.py", line 21, in assert_raises
+    raise AssertionError("%s not raised" % excName)
+AssertionError: S3ResponseError not raised
+-------------------- >> begin captured logging << --------------------
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-109/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-109/
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-109/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:26:59 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-109/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:HrxAK2Ticjdoy1ongDRLObuL87U=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:26:59 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:HrxAK2Ticjdoy1ongDRLObuL87U=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', 'qPSK9TzAPINlQFr6KuQNe8M1V6Euw78YqcSKYEZEmu5v1lML/NNBMxmyR4hWpab38K+EnqgP9bs='), ('server', 'AmazonS3'), ('x-amz-request-id', 'D4946B957DC9EC88'), ('location', '/jaehoon13-60eyqptpby3fxxs10vr-109'), ('date', 'Thu, 26 Jul 2018 10:27:00 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-109/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-109/
+boto: DEBUG: Method: DELETE
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-109/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+DELETE
+
+
+Thu, 26 Jul 2018 10:26:59 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-109/
+boto: DEBUG: Signature:
+AWS AKIAIKY5BKYZHAP6GPPQ:4rKFt58UXUjaJ/Mup4uKOk+nKVQ=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:26:59 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAIKY5BKYZHAP6GPPQ:4rKFt58UXUjaJ/Mup4uKOk+nKVQ=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('x-amz-id-2', 'PIA0dKFHn1xYHN6sNIFYcD+uupJaV07bD8Nu3OtEwW0ZbCre4i6vSbp//jJvS0/55PkYAbWUozI='), ('date', 'Thu, 26 Jul 2018 10:27:00 GMT'), ('x-amz-request-id', 'E199E6AF0A081FE7'), ('server', 'AmazonS3')]
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+FAIL: s3tests.functional.test_s3.test_object_giveaway
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 4782, in test_object_giveaway
+    e = assert_raises(boto.exception.S3ResponseError, key.set_xml_acl, WRONG_ACL)
+  File "/home/roengram/s3-tests/s3tests/functional/utils.py", line 21, in assert_raises
+    raise AssertionError("%s not raised" % excName)
+AssertionError: S3ResponseError not raised
+-------------------- >> begin captured logging << --------------------
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-111/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-111/
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-111/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:27:01 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-111/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:1kxIx+kZgFL9m//j543lF8nolAs=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:27:01 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:1kxIx+kZgFL9m//j543lF8nolAs=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', '/Y4C7FJIoWxlZZ8zpfhX2/RNftm+Bo/eBB+3DsKjbWLSPnlLi1XZxNTUhOwhW/CIPz3LnOnhG/8='), ('server', 'AmazonS3'), ('x-amz-request-id', '5254746C1E5C4A06'), ('location', '/jaehoon13-60eyqptpby3fxxs10vr-111'), ('date', 'Thu, 26 Jul 2018 10:27:02 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-111/foo
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-111/foo
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-111/foo
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'Content-Length': '3', 'Content-MD5': u'N7UdGUp1E+RbVvZSTy1R8g==', 'Content-Type': 'application/octet-stream', 'Expect': '100-Continue', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+N7UdGUp1E+RbVvZSTy1R8g==
+application/octet-stream
+Thu, 26 Jul 2018 10:27:02 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-111/foo
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:zVawpF5NCkBxxA9ToOJn7FeB3o8=
+boto: DEBUG: Final headers: {'Content-Length': '3', 'Content-MD5': 'N7UdGUp1E+RbVvZSTy1R8g==', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 10:27:02 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:zVawpF5NCkBxxA9ToOJn7FeB3o8='}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', '+jgfIJ9odN/hbpAkojmrAHsJ3Rdu1LMszs7nbPMW0sN73+7dtPZ9YcJtP3ivZ4Jgv+aW32IujOY='), ('server', 'AmazonS3'), ('x-amz-request-id', 'EA598BEC137B8119'), ('etag', '"37b51d194a7513e45b56f6524f2d51f2"'), ('date', 'Thu, 26 Jul 2018 10:27:03 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-111/foo
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-111/foo
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-111/foo?acl
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-111/foo?acl
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-111/foo?acl
+boto: DEBUG: Data: <?xml version="1.0" encoding="UTF-8"?><AccessControlPolicy xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Owner><ID>2e7538a859cad9f6e6546db2cf5381a4ac6826c6c511169584d0ca0200872f36</ID></Owner><AccessControlList><Grant><Grantee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CanonicalUser"><ID>2e7538a859cad9f6e6546db2cf5381a4ac6826c6c511169584d0ca0200872f36</ID></Grantee><Permission>FULL_CONTROL</Permission></Grant></AccessControlList></AccessControlPolicy>
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:27:02 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-111/foo?acl
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:f5gLtUxdy3gHR4bQizLHRdwJseA=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:27:02 GMT', 'Content-Length': '479', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:f5gLtUxdy3gHR4bQizLHRdwJseA=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('x-amz-id-2', 'tzhQzmcNIauCbQTqDFJbr4+bcrA/DqPOsrMT4q3II5lZ9asUSp2Xbb0yEc04pOtH2+nXCUyiVx8='), ('date', 'Thu, 26 Jul 2018 10:27:03 GMT'), ('content-length', '0'), ('x-amz-request-id', '70A81014D8E20A6A'), ('server', 'AmazonS3')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-111/foo
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-111/foo
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-111/foo?acl
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-111/foo?acl
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-111/foo?acl
+boto: DEBUG: Data: <?xml version="1.0" encoding="UTF-8"?><AccessControlPolicy xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Owner><ID>2e7538a859cad9f6e6546db2cf5381a4ac6826c6c511169584d0ca0200872f36</ID></Owner><AccessControlList><Grant><Grantee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CanonicalUser"><ID>2e7538a859cad9f6e6546db2cf5381a4ac6826c6c511169584d0ca0200872f36</ID></Grantee><Permission>FULL_CONTROL</Permission></Grant></AccessControlList></AccessControlPolicy>
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:27:02 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-111/foo?acl
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:f5gLtUxdy3gHR4bQizLHRdwJseA=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:27:02 GMT', 'Content-Length': '479', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:f5gLtUxdy3gHR4bQizLHRdwJseA=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('x-amz-id-2', '6Sfazc9Ti7CIJaL+Gf15R8w2Zi/hD1HXNMWL4AhQXJTWRuDGsUr6wqnfsMMs0yQwbHLeByfIJ0M='), ('date', 'Thu, 26 Jul 2018 10:27:04 GMT'), ('content-length', '0'), ('x-amz-request-id', 'D6A457B5D1ABB1D8'), ('server', 'AmazonS3')]
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+FAIL: s3tests.functional.test_s3.test_object_copy_to_itself
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 5007, in test_object_copy_to_itself
+    e = assert_raises(boto.exception.S3ResponseError, key.copy, bucket, 'foo123bar')
+  File "/home/roengram/s3-tests/s3tests/functional/utils.py", line 21, in assert_raises
+    raise AssertionError("%s not raised" % excName)
+AssertionError: S3ResponseError not raised
+-------------------- >> begin captured logging << --------------------
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-123/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-123/
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-123/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:27:39 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-123/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:7L0/g4IlAjdXLwQ4yz53Qcz7C70=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:27:39 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:7L0/g4IlAjdXLwQ4yz53Qcz7C70=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', '/ffqbLQzyI6Gn7crc5Z233kKv7Te/X+qNo8/foIzTQq3lVIlVd6pPE6kor8zFdUfnqg4SfLGmXo='), ('server', 'AmazonS3'), ('x-amz-request-id', '1324C589A1ED1ED0'), ('location', '/jaehoon13-60eyqptpby3fxxs10vr-123'), ('date', 'Thu, 26 Jul 2018 10:27:40 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-123/foo123bar
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-123/foo123bar
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-123/foo123bar
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'Content-Length': '3', 'Content-MD5': u'rL0Y20zC+Fzt72VPzMSk2A==', 'Content-Type': 'application/octet-stream', 'Expect': '100-Continue', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+rL0Y20zC+Fzt72VPzMSk2A==
+application/octet-stream
+Thu, 26 Jul 2018 10:27:39 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-123/foo123bar
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:xgvFz4Q8SOMtFr7syUXJs+znyaQ=
+boto: DEBUG: Final headers: {'Content-Length': '3', 'Content-MD5': 'rL0Y20zC+Fzt72VPzMSk2A==', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 10:27:39 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:xgvFz4Q8SOMtFr7syUXJs+znyaQ='}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', 'OYXoDBKsg/ZYOzUyylAIwaiZbhQH80tqmi/X1itTg9fj+164C9FYNiWqMNAULoWW9GVsjyHKDMw='), ('server', 'AmazonS3'), ('x-amz-request-id', '4D9944280A6E5E6C'), ('etag', '"acbd18db4cc2f85cedef654fccc4a4d8"'), ('date', 'Thu, 26 Jul 2018 10:27:41 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-123/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-123/
+boto: DEBUG: Method: HEAD
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-123/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+HEAD
+
+
+Thu, 26 Jul 2018 10:27:40 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-123/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:wAKjGVoElaU8YEFrw5A2G1bVyxU=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:27:40 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:wAKjGVoElaU8YEFrw5A2G1bVyxU=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('x-amz-bucket-region', 'us-east-1'), ('x-amz-id-2', '1Z4QR4TQgg2R/MnXqkg9dtQG2Nf8lEqBJQBavyl2bfXZUaaCCJdqNluC/GlSjsv9h8lncgTz9vQ='), ('server', 'AmazonS3'), ('transfer-encoding', 'chunked'), ('x-amz-request-id', '442E7474F84E2600'), ('date', 'Thu, 26 Jul 2018 10:27:41 GMT'), ('content-type', 'application/xml')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-123/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-123/
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-123/?prefix=foo123bar
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-123/?prefix=foo123bar
+boto: DEBUG: Method: GET
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-123/?prefix=foo123bar
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+GET
+
+
+Thu, 26 Jul 2018 10:27:40 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-123/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:UHEQ5jtEJXF/lYaFqS53oUPinUY=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:27:40 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:UHEQ5jtEJXF/lYaFqS53oUPinUY=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('x-amz-bucket-region', 'us-east-1'), ('x-amz-id-2', 'zoS9MXGPLIrKGRT7ZnF0MdA4EiQ1rKrCHCZloLtfJv6RRGjviHC8PV6xx7npI4DRjXUtvrjtLcU='), ('server', 'AmazonS3'), ('transfer-encoding', 'chunked'), ('x-amz-request-id', 'CE8904E59E930598'), ('date', 'Thu, 26 Jul 2018 10:27:41 GMT'), ('content-type', 'application/xml')]
+boto: DEBUG: <?xml version="1.0" encoding="UTF-8"?>
+<ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>jaehoon13-60eyqptpby3fxxs10vr-123</Name><Prefix>foo123bar</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated><Contents><Key>foo123bar</Key><LastModified>2018-07-26T10:27:41.000Z</LastModified><ETag>&quot;acbd18db4cc2f85cedef654fccc4a4d8&quot;</ETag><Size>3</Size><Owner><ID>2e7538a859cad9f6e6546db2cf5381a4ac6826c6c511169584d0ca0200872f36</ID><DisplayName>sungwookahn</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-123/foo123bar
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-123/foo123bar
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-123/foo123bar
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'x-amz-storage-class': u'STANDARD', 'x-amz-copy-source': 'jaehoon13-60eyqptpby3fxxs10vr-123/foo123bar', 'x-amz-metadata-directive': 'COPY'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:27:40 GMT
+x-amz-copy-source:jaehoon13-60eyqptpby3fxxs10vr-123/foo123bar
+x-amz-metadata-directive:COPY
+x-amz-storage-class:STANDARD
+/jaehoon13-60eyqptpby3fxxs10vr-123/foo123bar
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:wl1ffnUToQ8EZdOwHcnFXlAX+eg=
+boto: DEBUG: Final headers: {'Content-Length': '0', 'x-amz-storage-class': 'STANDARD', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'x-amz-copy-source': 'jaehoon13-60eyqptpby3fxxs10vr-123/foo123bar', 'Date': 'Thu, 26 Jul 2018 10:27:40 GMT', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:wl1ffnUToQ8EZdOwHcnFXlAX+eg=', 'x-amz-metadata-directive': 'COPY'}
+boto: DEBUG: Response headers: [('content-length', '234'), ('x-amz-id-2', 'tSf+M+vz8upagNS3RVWYS3GMdWLPqsFGE5UsJ4zMHp/EqqhhCvgK5KAegyUlVrTA0vG1ZDPhxF0='), ('server', 'AmazonS3'), ('x-amz-request-id', '15673489461A33F0'), ('date', 'Thu, 26 Jul 2018 10:27:41 GMT'), ('content-type', 'application/xml')]
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+FAIL: s3tests.functional.test_s3.test_multipart_resend_first_finishes_last
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 6417, in test_multipart_resend_first_finishes_last
+    _verify_atomic_key_data(key, file_size, 'A')
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 6078, in _verify_atomic_key_data
+    key.get_contents_to_file(fp_verify)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/key.py", line 1666, in get_contents_to_file
+    response_headers=response_headers)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/key.py", line 1498, in get_file
+    query_args=None)
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/boto/s3/key.py", line 1552, in _get_file_internal
+    fp.write(bytes)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 6071, in write
+    eq(data, self.char*size)
+AssertionError: 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB' != 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+-------------------- >> begin captured logging << --------------------
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-178/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:58:26 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-178/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:1Gyqxskdnmrqlud1hkiGxTqO/MY=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:58:26 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:1Gyqxskdnmrqlud1hkiGxTqO/MY=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', '3U4cC43NbbvZztfeZG+M/GYfAnetpxQPoSB2otrTo2TdGUSeq3YXdq33ddyVyu4PcoM9hTAcQiA='), ('server', 'AmazonS3'), ('x-amz-request-id', '825658350E1BE412'), ('location', '/jaehoon13-60eyqptpby3fxxs10vr-178'), ('date', 'Thu, 26 Jul 2018 10:58:27 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploads
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploads
+boto: DEBUG: Method: POST
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploads
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+POST
+
+
+Thu, 26 Jul 2018 10:58:26 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploads
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:3vkiWr8OP0pZY45tLV3T0HQKf5E=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:58:26 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:3vkiWr8OP0pZY45tLV3T0HQKf5E=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('x-amz-id-2', 'rLxgZVWU+oXq8GPb1IILFEIkGZwNsNfUY+IgUFJ5QsJPteO1X5cPFtUN1tPo52mu3VwOjXQxxxU='), ('date', 'Thu, 26 Jul 2018 10:58:27 GMT'), ('transfer-encoding', 'chunked'), ('x-amz-request-id', '96E9DBB22E375DBE'), ('server', 'AmazonS3')]
+boto: DEBUG: <?xml version="1.0" encoding="UTF-8"?>
+<InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>jaehoon13-60eyqptpby3fxxs10vr-178</Bucket><Key>mymultipart</Key><UploadId>z4W9FtG9bsZDbgtChxqH95t2wEiOkvqplIr7SWxsFE3xjbzvtC0f3h.iFVocDuYgeDHf9F_tbqtXdZiHr.UzVV.AYC8HYAoQ_HlRyRVAa7T1FcKHBNJzbiLQ1zIhceMP</UploadId></InitiateMultipartUploadResult>
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=z4W9FtG9bsZDbgtChxqH95t2wEiOkvqplIr7SWxsFE3xjbzvtC0f3h.iFVocDuYgeDHf9F_tbqtXdZiHr.UzVV.AYC8HYAoQ_HlRyRVAa7T1FcKHBNJzbiLQ1zIhceMP&partNumber=1
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=z4W9FtG9bsZDbgtChxqH95t2wEiOkvqplIr7SWxsFE3xjbzvtC0f3h.iFVocDuYgeDHf9F_tbqtXdZiHr.UzVV.AYC8HYAoQ_HlRyRVAa7T1FcKHBNJzbiLQ1zIhceMP&partNumber=1
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=z4W9FtG9bsZDbgtChxqH95t2wEiOkvqplIr7SWxsFE3xjbzvtC0f3h.iFVocDuYgeDHf9F_tbqtXdZiHr.UzVV.AYC8HYAoQ_HlRyRVAa7T1FcKHBNJzbiLQ1zIhceMP&partNumber=1
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'Content-Length': '8388608', 'Content-MD5': u'XdNTEwPdZ2SsuT5fFxpKuA==', 'Content-Type': 'application/octet-stream', 'Expect': '100-Continue', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+XdNTEwPdZ2SsuT5fFxpKuA==
+application/octet-stream
+Thu, 26 Jul 2018 10:58:27 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?partNumber=1&uploadId=z4W9FtG9bsZDbgtChxqH95t2wEiOkvqplIr7SWxsFE3xjbzvtC0f3h.iFVocDuYgeDHf9F_tbqtXdZiHr.UzVV.AYC8HYAoQ_HlRyRVAa7T1FcKHBNJzbiLQ1zIhceMP
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:GddMlfe30x/JdgyJDBrFB+HYphE=
+boto: DEBUG: Final headers: {'Content-Length': '8388608', 'Content-MD5': 'XdNTEwPdZ2SsuT5fFxpKuA==', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 10:58:27 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:GddMlfe30x/JdgyJDBrFB+HYphE='}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', 'UI9ZrveN601UjtXcdQSE15pvwWcBB3lrms9/0eUZL2NBU5mVSlV1I/novKEiEu1OEWwDN5Xr2/0='), ('server', 'AmazonS3'), ('x-amz-request-id', 'B370FA39EFE0FF8A'), ('etag', '"5dd3531303dd6764acb93e5f171a4ab8"'), ('date', 'Thu, 26 Jul 2018 10:58:28 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=z4W9FtG9bsZDbgtChxqH95t2wEiOkvqplIr7SWxsFE3xjbzvtC0f3h.iFVocDuYgeDHf9F_tbqtXdZiHr.UzVV.AYC8HYAoQ_HlRyRVAa7T1FcKHBNJzbiLQ1zIhceMP
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=z4W9FtG9bsZDbgtChxqH95t2wEiOkvqplIr7SWxsFE3xjbzvtC0f3h.iFVocDuYgeDHf9F_tbqtXdZiHr.UzVV.AYC8HYAoQ_HlRyRVAa7T1FcKHBNJzbiLQ1zIhceMP
+boto: DEBUG: Method: GET
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=z4W9FtG9bsZDbgtChxqH95t2wEiOkvqplIr7SWxsFE3xjbzvtC0f3h.iFVocDuYgeDHf9F_tbqtXdZiHr.UzVV.AYC8HYAoQ_HlRyRVAa7T1FcKHBNJzbiLQ1zIhceMP
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+GET
+
+
+Thu, 26 Jul 2018 10:58:30 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=z4W9FtG9bsZDbgtChxqH95t2wEiOkvqplIr7SWxsFE3xjbzvtC0f3h.iFVocDuYgeDHf9F_tbqtXdZiHr.UzVV.AYC8HYAoQ_HlRyRVAa7T1FcKHBNJzbiLQ1zIhceMP
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:rCh7RC4HeTJnkB49HFSTyilNBz4=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:58:30 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:rCh7RC4HeTJnkB49HFSTyilNBz4=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('x-amz-id-2', 'n53r90oMvkxwxDC7fziqpaBDCk+dNOVHvg1i5tCknlWiixa3vkE1j0YQ5qBiXoxyTksvHpFoIFg='), ('server', 'AmazonS3'), ('transfer-encoding', 'chunked'), ('x-amz-request-id', '6FD6C7791A9BC28D'), ('date', 'Thu, 26 Jul 2018 10:58:31 GMT'), ('content-type', 'application/xml')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=z4W9FtG9bsZDbgtChxqH95t2wEiOkvqplIr7SWxsFE3xjbzvtC0f3h.iFVocDuYgeDHf9F_tbqtXdZiHr.UzVV.AYC8HYAoQ_HlRyRVAa7T1FcKHBNJzbiLQ1zIhceMP
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=z4W9FtG9bsZDbgtChxqH95t2wEiOkvqplIr7SWxsFE3xjbzvtC0f3h.iFVocDuYgeDHf9F_tbqtXdZiHr.UzVV.AYC8HYAoQ_HlRyRVAa7T1FcKHBNJzbiLQ1zIhceMP
+boto: DEBUG: Method: POST
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=z4W9FtG9bsZDbgtChxqH95t2wEiOkvqplIr7SWxsFE3xjbzvtC0f3h.iFVocDuYgeDHf9F_tbqtXdZiHr.UzVV.AYC8HYAoQ_HlRyRVAa7T1FcKHBNJzbiLQ1zIhceMP
+boto: DEBUG: Data: <CompleteMultipartUpload>
+  <Part>
+    <PartNumber>1</PartNumber>
+    <ETag>"5dd3531303dd6764acb93e5f171a4ab8"</ETag>
+  </Part>
+</CompleteMultipartUpload>
+boto: DEBUG: Headers: {'Content-Type': 'text/xml'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+POST
+
+text/xml
+Thu, 26 Jul 2018 10:58:30 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=z4W9FtG9bsZDbgtChxqH95t2wEiOkvqplIr7SWxsFE3xjbzvtC0f3h.iFVocDuYgeDHf9F_tbqtXdZiHr.UzVV.AYC8HYAoQ_HlRyRVAa7T1FcKHBNJzbiLQ1zIhceMP
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:CokwfGNE1OxkmAXSriPVymtS+ao=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:58:30 GMT', 'Content-Length': '154', 'Content-Type': 'text/xml', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:CokwfGNE1OxkmAXSriPVymtS+ao=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('x-amz-id-2', '6mrBjoTLTtlUgbcz/rcuoaNTovAAoasiyOJ2XMescqF2x2UKC4OdJ6WFuEjtH7KL48FlpOFBCzU='), ('server', 'AmazonS3'), ('transfer-encoding', 'chunked'), ('x-amz-request-id', '5F7C736B0328D273'), ('date', 'Thu, 26 Jul 2018 10:58:31 GMT'), ('content-type', 'application/xml')]
+boto: DEBUG: <?xml version="1.0" encoding="UTF-8"?>
+
+<CompleteMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Location>https://s3.amazonaws.com/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart</Location><Bucket>jaehoon13-60eyqptpby3fxxs10vr-178</Bucket><Key>mymultipart</Key><ETag>&quot;53a1ef81e88bd0b535f164ef12e32ed1-1&quot;</ETag></CompleteMultipartUploadResult>
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: Method: DELETE
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+DELETE
+
+
+Thu, 26 Jul 2018 10:58:31 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:gU99SWWXGLmERq/HssTX3and7+I=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:58:31 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:gU99SWWXGLmERq/HssTX3and7+I=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('x-amz-id-2', 'cfUNe+8BaW0CnFr8bAXAI4BUSIvl8y+gTe/79IVsbrQo4FNAyGj2J1zEAPOn8Ywl5xR540s/Tq4='), ('date', 'Thu, 26 Jul 2018 10:58:32 GMT'), ('x-amz-request-id', '1DB1E92A89F27785'), ('server', 'AmazonS3')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploads
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploads
+boto: DEBUG: Method: POST
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploads
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+POST
+
+
+Thu, 26 Jul 2018 10:58:31 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploads
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:awGjbEc7cXPdhp5EPK8ZZCz8GC0=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:58:31 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:awGjbEc7cXPdhp5EPK8ZZCz8GC0=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('x-amz-id-2', 'g++pIBegHgCKxG+1RB/KKVoIpPFdIR9pLiI09D+bAdnYv9imn/kTEjncye4NVoh48iat/jSOE1Y='), ('date', 'Thu, 26 Jul 2018 10:58:32 GMT'), ('transfer-encoding', 'chunked'), ('x-amz-request-id', 'CDEA0F9642871B41'), ('server', 'AmazonS3')]
+boto: DEBUG: <?xml version="1.0" encoding="UTF-8"?>
+<InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>jaehoon13-60eyqptpby3fxxs10vr-178</Bucket><Key>mymultipart</Key><UploadId>Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH</UploadId></InitiateMultipartUploadResult>
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH&partNumber=1
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH&partNumber=1
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH&partNumber=1
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'Content-Length': '8388608', 'Content-MD5': u'UYiGy3DBwRnJmtG7tYZeeg==', 'Content-Type': 'application/octet-stream', 'Expect': '100-Continue', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+UYiGy3DBwRnJmtG7tYZeeg==
+application/octet-stream
+Thu, 26 Jul 2018 10:58:31 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?partNumber=1&uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:0DvCzCBOg8ECJg/kDK6Zj/a8wx4=
+boto: DEBUG: Final headers: {'Content-Length': '8388608', 'Content-MD5': 'UYiGy3DBwRnJmtG7tYZeeg==', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 10:58:31 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:0DvCzCBOg8ECJg/kDK6Zj/a8wx4='}
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH&partNumber=1
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH&partNumber=1
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH&partNumber=1
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'Content-Length': '8388608', 'Content-MD5': u'DFTZG9cZtqzmWnUTVzsH/w==', 'Content-Type': 'application/octet-stream', 'Expect': '100-Continue', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+DFTZG9cZtqzmWnUTVzsH/w==
+application/octet-stream
+Thu, 26 Jul 2018 10:58:34 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?partNumber=1&uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:3FeDmaLF1Zridz/WwLouv4iBgjU=
+boto: DEBUG: Final headers: {'Content-Length': '8388608', 'Content-MD5': 'DFTZG9cZtqzmWnUTVzsH/w==', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 10:58:34 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:3FeDmaLF1Zridz/WwLouv4iBgjU='}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', 'eoMzxJOTFtncA9u+pZyxhjtbMMNBhlHU00umV6bPCqcTGOGjLDkj1w0+B4fRmaNZf9prW05UxOI='), ('server', 'AmazonS3'), ('x-amz-request-id', 'FC6CC14F4D169829'), ('etag', '"0c54d91bd719b6ace65a7513573b07ff"'), ('date', 'Thu, 26 Jul 2018 10:58:35 GMT')]
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', 'QsRo380ly6j9JcFoqAdWQZ8NmRZv2o0bZZNWKfRsPFuPxqfl49OpkyUJIxPZR8h6PpsgPILlDec='), ('server', 'AmazonS3'), ('x-amz-request-id', 'A4F392636C95C3E0'), ('etag', '"518886cb70c1c119c99ad1bbb5865e7a"'), ('date', 'Thu, 26 Jul 2018 10:58:32 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH
+boto: DEBUG: Method: GET
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+GET
+
+
+Thu, 26 Jul 2018 10:58:37 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:/xYyz/TG3aqZAUPxFD2pDU58qHQ=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:58:37 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:/xYyz/TG3aqZAUPxFD2pDU58qHQ=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('x-amz-id-2', 'NgnjDUhySKqcbsGYaQWi7ACNv6EylPo4xLs3nXqDYR/782XqMHQ9QVsSKKFSaSQfi0q+eFXWHx8='), ('server', 'AmazonS3'), ('transfer-encoding', 'chunked'), ('x-amz-request-id', 'AC0430829FCF87D8'), ('date', 'Thu, 26 Jul 2018 10:58:38 GMT'), ('content-type', 'application/xml')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH
+boto: DEBUG: Method: POST
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH
+boto: DEBUG: Data: <CompleteMultipartUpload>
+  <Part>
+    <PartNumber>1</PartNumber>
+    <ETag>"0c54d91bd719b6ace65a7513573b07ff"</ETag>
+  </Part>
+</CompleteMultipartUpload>
+boto: DEBUG: Headers: {'Content-Type': 'text/xml'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+POST
+
+text/xml
+Thu, 26 Jul 2018 10:58:38 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart?uploadId=Rczhi7Ng8oJ9t2x8kBa3L441VyNpSmX8lBHJBG4bcp5aGTMv8rfr36oHF.6uT11vbemjhyagK9H5JkmHR87bfiajJiaQTEmlZKV1hQ9YD.z1Q9ASpMVl3vzj1vaNp2RH
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:Nb9m8D7J53qPXBandxKeQpY/k0o=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:58:38 GMT', 'Content-Length': '154', 'Content-Type': 'text/xml', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:Nb9m8D7J53qPXBandxKeQpY/k0o=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('x-amz-id-2', 'thE1ZtxKYCQ4TbaL31YUy2Cxu3MptndVRGQyPoVSCvjgZd/S/r1+RsJZFKN8DVYMwBAIlHDseXY='), ('server', 'AmazonS3'), ('transfer-encoding', 'chunked'), ('x-amz-request-id', 'B2ADE6F79AD80350'), ('date', 'Thu, 26 Jul 2018 10:58:39 GMT'), ('content-type', 'application/xml')]
+boto: DEBUG: <?xml version="1.0" encoding="UTF-8"?>
+
+<CompleteMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Location>https://s3.amazonaws.com/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart</Location><Bucket>jaehoon13-60eyqptpby3fxxs10vr-178</Bucket><Key>mymultipart</Key><ETag>&quot;9b16b381dc8d938068551a36ea71b11b-1&quot;</ETag></CompleteMultipartUploadResult>
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: Method: HEAD
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+HEAD
+
+
+Thu, 26 Jul 2018 10:58:38 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:t6ltQCHJw1+NWNyst+SfPV/FDvw=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:58:38 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:t6ltQCHJw1+NWNyst+SfPV/FDvw=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '8388608'), ('x-amz-id-2', 's5LhfTt4ua/thUB5CPggtfJFQeQn+Xa6qDZkI8nWnMDjivDhf5rVePGB9oUmk8pgJd2++AQcQjg='), ('accept-ranges', 'bytes'), ('server', 'AmazonS3'), ('last-modified', 'Thu, 26 Jul 2018 10:58:32 GMT'), ('x-amz-request-id', '1D95AAA4106B0538'), ('etag', '"9b16b381dc8d938068551a36ea71b11b-1"'), ('date', 'Thu, 26 Jul 2018 10:58:39 GMT'), ('content-type', 'binary/octet-stream')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: Method: GET
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+GET
+
+
+Thu, 26 Jul 2018 10:58:38 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-178/mymultipart
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:XnzDHwZZ8GdhqXYSUdFiI8NqrTg=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:58:38 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:XnzDHwZZ8GdhqXYSUdFiI8NqrTg=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '8388608'), ('x-amz-id-2', 'vW7j2WuMNS3lReDNftZ2UMxbf3z00Xt5lONPt2zN4cIYmst2gwrub2RueE4o8HDnH0UHZEnHrCQ='), ('accept-ranges', 'bytes'), ('server', 'AmazonS3'), ('last-modified', 'Thu, 26 Jul 2018 10:58:32 GMT'), ('x-amz-request-id', '6098E930A0B0136B'), ('etag', '"9b16b381dc8d938068551a36ea71b11b-1"'), ('date', 'Thu, 26 Jul 2018 10:58:39 GMT'), ('content-type', 'binary/octet-stream')]
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+FAIL: s3tests.functional.test_s3.test_encryption_sse_c_method_head
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 8152, in test_encryption_sse_c_method_head
+    eq(res.status, 200)
+AssertionError: 403 != 200
+-------------------- >> begin captured stdout << ---------------------
+400 Bad Request
+403 Forbidden
+
+--------------------- >> end captured stdout << ----------------------
+-------------------- >> begin captured logging << --------------------
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-191/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-191/
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-191/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:59:17 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-191/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:4elKyhTk6L8KnSgoYuRDF62yvfU=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:59:17 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:4elKyhTk6L8KnSgoYuRDF62yvfU=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: encountered BadStatusLine exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:59:17 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-191/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:4elKyhTk6L8KnSgoYuRDF62yvfU=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:59:17 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:4elKyhTk6L8KnSgoYuRDF62yvfU=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', 'AYCwhHXyF/owVlK2mxzgmPR+B62BNVRtbvppb5C39qMghnN54nlrQKsTanBAFkNWj6zXuIP0Ym4='), ('server', 'AmazonS3'), ('x-amz-request-id', 'B693447D1EA14444'), ('location', '/jaehoon13-60eyqptpby3fxxs10vr-191'), ('date', 'Thu, 26 Jul 2018 10:59:19 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-191/testobj
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-191/testobj
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-191/testobj
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'x-amz-server-side-encryption-customer-key-md5': 'DWygnHRtgiJ77HCm+1rvHw==', 'Content-Length': '1000', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': u'dkRnLQSSkPA5DZyZPH00PQ==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+dkRnLQSSkPA5DZyZPH00PQ==
+application/octet-stream
+Thu, 26 Jul 2018 10:59:18 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:DWygnHRtgiJ77HCm+1rvHw==
+/jaehoon13-60eyqptpby3fxxs10vr-191/testobj
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:6ADR4fsvQFz6gpyr2SnveaRVees=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'DWygnHRtgiJ77HCm+1rvHw==', 'Content-Length': '1000', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'dkRnLQSSkPA5DZyZPH00PQ==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 10:59:18 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:6ADR4fsvQFz6gpyr2SnveaRVees='}
+boto: DEBUG: encountered BadStatusLine exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+dkRnLQSSkPA5DZyZPH00PQ==
+application/octet-stream
+Thu, 26 Jul 2018 10:59:18 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:DWygnHRtgiJ77HCm+1rvHw==
+/jaehoon13-60eyqptpby3fxxs10vr-191/testobj
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:6ADR4fsvQFz6gpyr2SnveaRVees=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'DWygnHRtgiJ77HCm+1rvHw==', 'Content-Length': '1000', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'dkRnLQSSkPA5DZyZPH00PQ==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 10:59:18 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:6ADR4fsvQFz6gpyr2SnveaRVees='}
+boto: DEBUG: Response headers: [('x-amz-server-side-encryption-customer-key-md5', 'DWygnHRtgiJ77HCm+1rvHw=='), ('content-length', '0'), ('x-amz-server-side-encryption-customer-algorithm', 'AES256'), ('x-amz-id-2', 'niM7m8J7tqpcKXdgQBY1l+8tWLxoKNjNtg/ui1OkgpLRqiSOn+mjLfFxZ8DN+sFjNqYGhVipkqU='), ('server', 'AmazonS3'), ('x-amz-request-id', '42D07B44CF91F293'), ('etag', '"9ebd9caa3d919d5c94fa911c2b2b765b"'), ('date', 'Thu, 26 Jul 2018 10:59:21 GMT')]
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+FAIL: s3tests.functional.test_s3.test_encryption_sse_c_other_key
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/roengram/s3-tests/virtualenv/local/lib/python2.7/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/roengram/s3-tests/s3tests/functional/test_s3.py", line 8196, in test_encryption_sse_c_other_key
+    eq(e.status, 400)
+AssertionError: 403 != 400
+-------------------- >> begin captured logging << --------------------
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-193/
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-193/
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-193/
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:59:25 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-193/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:ZqWmy4qQoGJcWbh8Me3mmMUZabs=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:59:25 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:ZqWmy4qQoGJcWbh8Me3mmMUZabs=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: encountered BadStatusLine exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+
+
+Thu, 26 Jul 2018 10:59:25 GMT
+/jaehoon13-60eyqptpby3fxxs10vr-193/
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:ZqWmy4qQoGJcWbh8Me3mmMUZabs=
+boto: DEBUG: Final headers: {'Date': 'Thu, 26 Jul 2018 10:59:25 GMT', 'Content-Length': '0', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:ZqWmy4qQoGJcWbh8Me3mmMUZabs=', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic'}
+boto: DEBUG: Response headers: [('content-length', '0'), ('x-amz-id-2', '5JeIoNGow7gAIRhkrh37fdRjfz4uaUtDj2fILAuGAczgmpNJiUKzqQZg/nu9NnAjt3gOvmkyJOU='), ('server', 'AmazonS3'), ('x-amz-request-id', 'C2DC62B66BE3C1B5'), ('location', '/jaehoon13-60eyqptpby3fxxs10vr-193'), ('date', 'Thu, 26 Jul 2018 10:59:28 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-193/testobj
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-193/testobj
+boto: DEBUG: Method: PUT
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-193/testobj
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'x-amz-server-side-encryption-customer-key-md5': 'DWygnHRtgiJ77HCm+1rvHw==', 'Content-Length': '100', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': u'itxZN+Y19smvZG8LI1YPrg==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+itxZN+Y19smvZG8LI1YPrg==
+application/octet-stream
+Thu, 26 Jul 2018 10:59:27 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:DWygnHRtgiJ77HCm+1rvHw==
+/jaehoon13-60eyqptpby3fxxs10vr-193/testobj
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:LEsxB1V45MaPNPvQ1M67c4TQwpM=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'DWygnHRtgiJ77HCm+1rvHw==', 'Content-Length': '100', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'itxZN+Y19smvZG8LI1YPrg==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 10:59:27 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:LEsxB1V45MaPNPvQ1M67c4TQwpM='}
+boto: DEBUG: encountered BadStatusLine exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+PUT
+itxZN+Y19smvZG8LI1YPrg==
+application/octet-stream
+Thu, 26 Jul 2018 10:59:27 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=
+x-amz-server-side-encryption-customer-key-md5:DWygnHRtgiJ77HCm+1rvHw==
+/jaehoon13-60eyqptpby3fxxs10vr-193/testobj
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:LEsxB1V45MaPNPvQ1M67c4TQwpM=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'DWygnHRtgiJ77HCm+1rvHw==', 'Content-Length': '100', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'Content-MD5': 'itxZN+Y19smvZG8LI1YPrg==', 'x-amz-server-side-encryption-customer-key': 'pO3upElrwuEXSoFwCfnZPdSsmt/xWeFa0N9KgDijwVs=', 'Expect': '100-Continue', 'Date': 'Thu, 26 Jul 2018 10:59:27 GMT', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'Content-Type': 'application/octet-stream', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:LEsxB1V45MaPNPvQ1M67c4TQwpM='}
+boto: DEBUG: Response headers: [('x-amz-server-side-encryption-customer-key-md5', 'DWygnHRtgiJ77HCm+1rvHw=='), ('content-length', '0'), ('x-amz-server-side-encryption-customer-algorithm', 'AES256'), ('x-amz-id-2', 'N4fkTro8n9YSo98JtduUkLkFH0KiGU+rb4iIUxrhoT2GLFQcWTRQOPqd0MU0J7nFmfJMqmk7g74='), ('server', 'AmazonS3'), ('x-amz-request-id', 'F1812CC34371BEC2'), ('etag', '"61060b00c1aa820a9fbe84bdc8961886"'), ('date', 'Thu, 26 Jul 2018 10:59:29 GMT')]
+boto: DEBUG: path=/jaehoon13-60eyqptpby3fxxs10vr-193/testobj
+boto: DEBUG: auth_path=/jaehoon13-60eyqptpby3fxxs10vr-193/testobj
+boto: DEBUG: Method: GET
+boto: DEBUG: Path: /jaehoon13-60eyqptpby3fxxs10vr-193/testobj
+boto: DEBUG: Data: 
+boto: DEBUG: Headers: {'x-amz-server-side-encryption-customer-key-md5': 'arxBvwY2V4SiOne6yppVPQ==', 'x-amz-server-side-encryption-customer-key': '6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=', 'x-amz-server-side-encryption-customer-algorithm': 'AES256'}
+boto: DEBUG: Host: s3.amazonaws.com
+boto: DEBUG: Port: 443
+boto: DEBUG: Params: {}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+GET
+
+
+Thu, 26 Jul 2018 10:59:28 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=
+x-amz-server-side-encryption-customer-key-md5:arxBvwY2V4SiOne6yppVPQ==
+/jaehoon13-60eyqptpby3fxxs10vr-193/testobj
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:aYSCO8Twypej8dAk/OWCguqczKc=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'arxBvwY2V4SiOne6yppVPQ==', 'Content-Length': '0', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'x-amz-server-side-encryption-customer-key': '6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=', 'Date': 'Thu, 26 Jul 2018 10:59:28 GMT', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:aYSCO8Twypej8dAk/OWCguqczKc='}
+boto: DEBUG: encountered BadStatusLine exception, reconnecting
+boto: DEBUG: establishing HTTPS connection: host=s3.amazonaws.com, kwargs={'port': 443, 'timeout': 70}
+boto: DEBUG: Token: None
+boto: DEBUG: StringToSign:
+GET
+
+
+Thu, 26 Jul 2018 10:59:28 GMT
+x-amz-server-side-encryption-customer-algorithm:AES256
+x-amz-server-side-encryption-customer-key:6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=
+x-amz-server-side-encryption-customer-key-md5:arxBvwY2V4SiOne6yppVPQ==
+/jaehoon13-60eyqptpby3fxxs10vr-193/testobj
+boto: DEBUG: Signature:
+AWS AKIAJEU7AWD7OYBYFMHA:aYSCO8Twypej8dAk/OWCguqczKc=
+boto: DEBUG: Final headers: {'x-amz-server-side-encryption-customer-key-md5': 'arxBvwY2V4SiOne6yppVPQ==', 'Content-Length': '0', 'x-amz-server-side-encryption-customer-algorithm': 'AES256', 'User-Agent': 'Boto/2.49.0 Python/2.7.12 Linux/4.10.0-42-generic', 'x-amz-server-side-encryption-customer-key': '6b+WOZ1T3cqZMxgThRcXAQBrS5mXKdDUphvpxptl9/4=', 'Date': 'Thu, 26 Jul 2018 10:59:28 GMT', 'Authorization': u'AWS AKIAJEU7AWD7OYBYFMHA:aYSCO8Twypej8dAk/OWCguqczKc='}
+boto: DEBUG: Response headers: [('x-amz-id-2', 'qMZBTNBcyyNUfJSyVrX1gfvdn1uam3QD+eNNkh2iaeYLfKZb8i20sPyZ2JQx+MJGGZD5oYaSlo4='), ('server', 'AmazonS3'), ('transfer-encoding', 'chunked'), ('x-amz-request-id', 'A1119B947A66C807'), ('date', 'Thu, 26 Jul 2018 10:59:29 GMT'), ('content-type', 'application/xml')]
+--------------------- >> end captured logging << ---------------------
+
+----------------------------------------------------------------------
+Ran 204 tests in 2796.973s
+
+FAILED (SKIP=8, errors=3, failures=7)
