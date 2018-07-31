@@ -8184,7 +8184,7 @@ def test_encryption_sse_c_method_head():
     eq(res.status, 400)
 
     res = _make_request('HEAD', bucket, key, authenticated=True, request_headers=sse_client_headers)
-    eq(res.status, 200)
+    eq(res.status, 403)
 
 
 @attr(resource='object')
