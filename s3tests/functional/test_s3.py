@@ -8228,7 +8228,7 @@ def test_encryption_sse_c_other_key():
     key.set_contents_from_string(data, headers=sse_client_headers_A)
     e = assert_raises(boto.exception.S3ResponseError,
                       key.get_contents_as_string, headers=sse_client_headers_B)
-    eq(e.status, 400)
+    eq(e.status, 403)
 
 
 @attr(resource='object')
