@@ -1583,6 +1583,7 @@ def test_post_object_authenticated_request_bad_access_key():
 @attr(method='post')
 @attr(operation='anonymous browser based upload via POST request')
 @attr(assertion='succeeds with status 201')
+@attr('ACLs')
 def test_post_object_set_success_code():
 	bucket = get_new_bucket()
 	bucket.set_acl('public-read-write')
@@ -1602,6 +1603,7 @@ def test_post_object_set_success_code():
 @attr(method='post')
 @attr(operation='anonymous browser based upload via POST request')
 @attr(assertion='succeeds with status 204')
+@attr('ACLs')
 def test_post_object_set_invalid_success_code():
 	bucket = get_new_bucket()
 	bucket.set_acl('public-read-write')
@@ -1806,6 +1808,7 @@ def test_post_object_escaped_field_values():
 @attr(method='post')
 @attr(operation='authenticated browser based upload via POST request')
 @attr(assertion='succeeds and returns redirect url')
+@attr('ACLs')
 def test_post_object_success_redirect_action():
 	bucket = get_new_bucket()
 
@@ -2805,6 +2808,7 @@ def test_object_raw_get():
 @attr(method='get')
 @attr(operation='deleted object and bucket')
 @attr(assertion='fails 404')
+@attr('ACLs')
 def test_object_raw_get_bucket_gone():
     (bucket, key) = _setup_request('public-read', 'public-read')
     key.delete()
@@ -2833,6 +2837,7 @@ def test_object_delete_key_bucket_gone():
 @attr(method='get')
 @attr(operation='deleted object')
 @attr(assertion='fails 404')
+@attr('ACLs')
 def test_object_raw_get_object_gone():
     (bucket, key) = _setup_request('public-read', 'public-read')
     key.delete()
@@ -2935,6 +2940,7 @@ def test_object_raw_authenticated():
 @attr(operation='authenticated on private bucket/private object with modified response headers')
 @attr(assertion='succeeds')
 @attr('fails_on_rgw')
+@attr('ACLs')
 def test_object_raw_response_headers():
     (bucket, key) = _setup_request('private', 'private')
 
@@ -2989,6 +2995,7 @@ def test_object_raw_authenticated_object_acl():
 @attr(method='get')
 @attr(operation='authenticated on deleted object and bucket')
 @attr(assertion='fails 404')
+@attr('ACLs')
 def test_object_raw_authenticated_bucket_gone():
     (bucket, key) = _setup_request('public-read', 'public-read')
     key.delete()
@@ -3003,6 +3010,7 @@ def test_object_raw_authenticated_bucket_gone():
 @attr(method='get')
 @attr(operation='authenticated on deleted object')
 @attr(assertion='fails 404')
+@attr('ACLs')
 def test_object_raw_authenticated_object_gone():
     (bucket, key) = _setup_request('public-read', 'public-read')
     key.delete()
@@ -3084,6 +3092,7 @@ def test_object_raw_put():
 @attr(method='put')
 @attr(operation='unauthenticated, publically writable object')
 @attr(assertion='succeeds')
+@attr('ACLs')
 def test_object_raw_put_write_access():
     bucket = get_new_bucket()
     bucket.set_acl('public-read-write')
@@ -4603,6 +4612,7 @@ def test_bucket_acl_revoke_all():
 @attr(operation='set/enable/disable logging target')
 @attr(assertion='operations succeed')
 @attr('fails_on_rgw')
+@attr('ACLs')
 def test_logging_toggle():
     bucket = get_new_bucket()
     log_bucket = get_new_bucket(targets.main.default, bucket.name + '-log')
@@ -4951,6 +4961,7 @@ def test_bucket_recreate_not_overriding():
 @attr(method='put')
 @attr(operation='create and list objects with special names')
 @attr(assertion='special names work')
+@attr('ACLs')
 def test_bucket_create_special_key_names():
     key_names = [
         ' ',
@@ -5096,6 +5107,7 @@ def test_object_copy_not_owned_bucket():
 @attr(method='put')
 @attr(operation='copy a non-owned object in a non-owned bucket, but with perms')
 @attr(assertion='works')
+@attr('ACLs')
 def test_object_copy_not_owned_object_bucket():
     bucket = get_new_bucket(targets.main.default)
     key = bucket.new_key('foo123bar')
@@ -5189,6 +5201,7 @@ def test_object_copy_key_not_found():
 @attr(method='put')
 @attr(operation='copy object to/from versioned bucket')
 @attr(assertion='works')
+@attr('versioning')
 def test_object_copy_versioned_bucket():
     bucket = get_new_bucket()
     check_configure_versioning_retry(bucket, True, "Enabled")
@@ -5531,6 +5544,7 @@ def test_multipart_copy_special_names():
 @attr(resource='object')
 @attr(method='put')
 @attr(operation='check multipart copies of versioned objects')
+@attr('versioning')
 def test_multipart_copy_versioned():
     src_bucket = get_new_bucket()
     dst_bucket = get_new_bucket()
@@ -5833,6 +5847,7 @@ def _simple_http_req_100_cont(host, port, is_secure, method, resource):
 @attr(assertion='succeeds if object is public-read-write')
 @attr('100_continue')
 @attr('fails_on_mod_proxy_fcgi')
+@attr('ACLs')
 def test_100_continue():
     bucket = get_new_bucket()
     objname = 'testobj'
@@ -5875,6 +5890,7 @@ def test_stress_bucket_acls_changes():
 @attr(method='put')
 @attr(operation='set cors')
 @attr(assertion='succeeds')
+@attr('CORS')
 def test_set_cors():
     bucket = get_new_bucket()
     cfg = CORSConfiguration()
@@ -5918,6 +5934,7 @@ def _cors_request_and_check(func, url, headers, expect_status, expect_allow_orig
 @attr(method='get')
 @attr(operation='check cors response when origin header set')
 @attr(assertion='returning cors header')
+@attr('ACLs')
 def test_cors_origin_response():
     cfg = CORSConfiguration()
     bucket = get_new_bucket()
@@ -5985,6 +6002,7 @@ def test_cors_origin_response():
 @attr(method='get')
 @attr(operation='check cors response when origin is set to wildcard')
 @attr(assertion='returning cors header')
+@attr('ACLs')
 def test_cors_origin_wildcard():
     cfg = CORSConfiguration()
     bucket = get_new_bucket()
@@ -6010,6 +6028,7 @@ def test_cors_origin_wildcard():
 @attr(method='get')
 @attr(operation='check cors response when Access-Control-Request-Headers is set in option request')
 @attr(assertion='returning cors header')
+@attr('ACLs')
 def test_cors_header_option():
     cfg = CORSConfiguration()
     bucket = get_new_bucket()
