@@ -2916,6 +2916,7 @@ def test_object_raw_get_object_acl():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='authenticated on public bucket/object')
 @attr(assertion='succeeds')
 def test_object_raw_authenticated():
@@ -2957,6 +2958,7 @@ def test_object_raw_response_headers():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='authenticated on private bucket/public object')
 @attr(assertion='succeeds')
 def test_object_raw_authenticated_bucket_acl():
@@ -2969,6 +2971,7 @@ def test_object_raw_authenticated_bucket_acl():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='authenticated on public bucket/private object')
 @attr(assertion='succeeds')
 def test_object_raw_authenticated_object_acl():
@@ -3950,6 +3953,7 @@ def test_object_acl_full_control_verify_attributes():
 
 @attr(resource='bucket')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl private')
 @attr(assertion='a private object can be set to private')
 def test_bucket_acl_canned_private_to_private():
@@ -3995,6 +3999,7 @@ def _build_bucket_acl_xml(permission, bucket=None):
 
 @attr(resource='bucket.acls')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl FULL_CONTROL (xml)')
 @attr(assertion='reads back correctly')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${USER}</ArgumentValue>
@@ -4004,6 +4009,7 @@ def test_bucket_acl_xml_fullcontrol():
 
 @attr(resource='bucket.acls')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl WRITE (xml)')
 @attr(assertion='reads back correctly')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${USER}</ArgumentValue>
@@ -4013,6 +4019,7 @@ def test_bucket_acl_xml_write():
 
 @attr(resource='bucket.acls')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl WRITE_ACP (xml)')
 @attr(assertion='reads back correctly')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${USER}</ArgumentValue>
@@ -4022,6 +4029,7 @@ def test_bucket_acl_xml_writeacp():
 
 @attr(resource='bucket.acls')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl READ (xml)')
 @attr(assertion='reads back correctly')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${USER}</ArgumentValue>
@@ -4031,6 +4039,7 @@ def test_bucket_acl_xml_read():
 
 @attr(resource='bucket.acls')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl READ_ACP (xml)')
 @attr(assertion='reads back correctly')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${USER}</ArgumentValue>
@@ -4070,6 +4079,7 @@ def _build_object_acl_xml(permission):
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl FULL_CONTROL (xml)')
 @attr(assertion='reads back correctly')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${USER}</ArgumentValue>
@@ -4079,6 +4089,7 @@ def test_object_acl_xml():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl WRITE (xml)')
 @attr(assertion='reads back correctly')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${USER}</ArgumentValue>
@@ -4088,6 +4099,7 @@ def test_object_acl_xml_write():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl WRITE_ACP (xml)')
 @attr(assertion='reads back correctly')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${USER}</ArgumentValue>
@@ -4097,6 +4109,7 @@ def test_object_acl_xml_writeacp():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl READ (xml)')
 @attr(assertion='reads back correctly')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${USER}</ArgumentValue>
@@ -4106,6 +4119,7 @@ def test_object_acl_xml_read():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl READ_ACP (xml)')
 @attr(assertion='reads back correctly')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${USER}</ArgumentValue>
@@ -4215,6 +4229,7 @@ def _check_bucket_acl_grant_cant_writeacp(bucket):
 
 @attr(resource='bucket')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl w/userid FULL_CONTROL')
 @attr(assertion='can read/write data/acls')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${USER}</ArgumentValue>
@@ -4239,6 +4254,7 @@ def test_bucket_acl_grant_userid_fullcontrol():
 
 @attr(resource='bucket')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl w/userid READ')
 @attr(assertion='can read data, no other r/w')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${ALTUSER}</ArgumentValue>
@@ -4257,6 +4273,7 @@ def test_bucket_acl_grant_userid_read():
 
 @attr(resource='bucket')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl w/userid READ_ACP')
 @attr(assertion='can read acl, no other r/w')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${ALTUSER}</ArgumentValue>
@@ -4275,6 +4292,7 @@ def test_bucket_acl_grant_userid_readacp():
 
 @attr(resource='bucket')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl w/userid WRITE')
 @attr(assertion='can write data, no other r/w')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${ALTUSER}</ArgumentValue>
@@ -4293,6 +4311,7 @@ def test_bucket_acl_grant_userid_write():
 
 @attr(resource='bucket')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl w/userid WRITE_ACP')
 @attr(assertion='can write acls, no other r/w')
 @attr('fails_on_aws') #  <Error><Code>InvalidArgument</Code><Message>Invalid id</Message><ArgumentName>CanonicalUser/ID</ArgumentName><ArgumentValue>${ALTUSER}</ArgumentValue>
@@ -4311,6 +4330,7 @@ def test_bucket_acl_grant_userid_writeacp():
 
 @attr(resource='bucket')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set acl w/invalid userid')
 @attr(assertion='fails 400')
 def test_bucket_acl_grant_nonexist_user():
@@ -4328,6 +4348,7 @@ def test_bucket_acl_grant_nonexist_user():
 
 @attr(resource='bucket')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='revoke all ACLs')
 @attr(assertion='can: read obj, get/set bucket acl, cannot write objs')
 def test_bucket_acl_no_grants():
@@ -4502,6 +4523,7 @@ def test_bucket_header_acl_grants():
 # created without an email.
 @attr(resource='bucket')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='add second FULL_CONTROL user')
 @attr(assertion='works for S3, fails for DHO')
 @attr('fails_on_aws') #  <Error><Code>AmbiguousGrantByEmailAddress</Code><Message>The e-mail address you provided is associated with more than one account. Please retry your request using a different identification method or after resolving the ambiguity.</Message>
@@ -4542,6 +4564,7 @@ def test_bucket_acl_grant_email():
 
 @attr(resource='bucket')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='add acl for nonexistent user')
 @attr(assertion='fail 400')
 def test_bucket_acl_grant_email_notexist():
@@ -4557,6 +4580,7 @@ def test_bucket_acl_grant_email_notexist():
 
 @attr(resource='bucket')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='revoke all ACLs')
 @attr(assertion='acls read back as empty')
 def test_bucket_acl_revoke_all():
@@ -4617,6 +4641,7 @@ def get_bucket_key_names(bucket):
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set bucket/object acls: private/private')
 @attr(assertion='public has no access to bucket or objects')
 def test_access_bucket_private_object_private():
@@ -4639,6 +4664,7 @@ def test_access_bucket_private_object_private():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set bucket/object acls: private/public-read')
 @attr(assertion='public can only read readable object')
 def test_access_bucket_private_object_publicread():
@@ -4654,6 +4680,7 @@ def test_access_bucket_private_object_publicread():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set bucket/object acls: private/public-read/write')
 @attr(assertion='public can only read the readable object')
 def test_access_bucket_private_object_publicreadwrite():
@@ -4670,6 +4697,7 @@ def test_access_bucket_private_object_publicreadwrite():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set bucket/object acls: public-read/private')
 @attr(assertion='public can only list the bucket')
 def test_access_bucket_publicread_object_private():
@@ -4685,6 +4713,7 @@ def test_access_bucket_publicread_object_private():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set bucket/object acls: public-read/public-read')
 @attr(assertion='public can read readable objects and list bucket')
 def test_access_bucket_publicread_object_publicread():
@@ -4700,6 +4729,7 @@ def test_access_bucket_publicread_object_publicread():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set bucket/object acls: public-read/public-read-write')
 @attr(assertion='public can read readable objects and list bucket')
 def test_access_bucket_publicread_object_publicreadwrite():
@@ -4716,6 +4746,7 @@ def test_access_bucket_publicread_object_publicreadwrite():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set bucket/object acls: public-read-write/private')
 @attr(assertion='private objects cannot be read, but can be overwritten')
 def test_access_bucket_publicreadwrite_object_private():
@@ -4731,6 +4762,7 @@ def test_access_bucket_publicreadwrite_object_private():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set bucket/object acls: public-read-write/public-read')
 @attr(assertion='private objects cannot be read, but can be overwritten')
 def test_access_bucket_publicreadwrite_object_publicread():
@@ -4745,6 +4777,7 @@ def test_access_bucket_publicreadwrite_object_publicread():
 
 @attr(resource='object')
 @attr(method='ACLs')
+@attr('ACLs')
 @attr(operation='set bucket/object acls: public-read-write/public-read-write')
 @attr(assertion='private objects cannot be read, but can be overwritten')
 def test_access_bucket_publicreadwrite_object_publicreadwrite():
