@@ -937,6 +937,7 @@ def test_bucket_list_object_time():
 @attr(method='get')
 @attr(operation='list all objects (anonymous)')
 @attr(assertion='succeeds')
+@attr('ACLs')
 def test_bucket_list_objects_anonymous():
     # Get a connection with bad authorization, then change it to be our new Anonymous auth mechanism,
     # emulating standard HTTP access.
@@ -1452,6 +1453,7 @@ def _get_post_url(conn, bucket):
 @attr(method='post')
 @attr(operation='anonymous browser based upload via POST request')
 @attr(assertion='succeeds and returns written data')
+@attr('ACLs')
 def test_post_object_anonymous_request():
 	bucket = get_new_bucket()
 	url = _get_post_url(s3.main, bucket)
@@ -1544,6 +1546,7 @@ def test_post_object_authenticated_no_content_type():
 @attr(method='post')
 @attr(operation='authenticated browser based upload via POST request, bad access key')
 @attr(assertion='fails')
+@attr('ACLs')
 def test_post_object_authenticated_request_bad_access_key():
 	bucket = get_new_bucket()
 	bucket.set_acl('public-read-write')
