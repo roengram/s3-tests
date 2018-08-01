@@ -2797,6 +2797,7 @@ def _setup_bucket_request(bucket_acl=None):
 @attr(method='get')
 @attr(operation='publically readable bucket')
 @attr(assertion='bucket is readable')
+@attr('ACLs')
 def test_object_raw_get():
     (bucket, key) = _setup_request('public-read', 'public-read')
     res = _make_request('GET', bucket, key)
@@ -3443,6 +3444,7 @@ def test_bucket_get_location():
 @attr(method='put')
 @attr(operation='re-create by non-owner')
 @attr(assertion='fails 409')
+@attr('Nonowner')
 def test_bucket_create_exists_nonowner():
     # Names are shared across a global namespace. As such, no two
     # users can create a bucket with that same name.
@@ -3457,6 +3459,7 @@ def test_bucket_create_exists_nonowner():
 @attr(method='del')
 @attr(operation='delete by non-owner')
 @attr(assertion='fails')
+@attr('Nonowner')
 def test_bucket_delete_nonowner():
     bucket = get_new_bucket()
     check_access_denied(s3.alt.delete_bucket, bucket.name)
@@ -5092,6 +5095,7 @@ def test_object_copy_diff_bucket():
 @attr(method='put')
 @attr(operation='copy from an inaccessible bucket')
 @attr(assertion='fails w/AttributeError')
+@attr('Nonowner')
 def test_object_copy_not_owned_bucket():
     buckets = [get_new_bucket(), get_new_bucket(targets.alt.default)]
     print repr(buckets[1])
