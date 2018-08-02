@@ -5095,7 +5095,7 @@ def test_object_copy_diff_bucket():
 @attr(method='put')
 @attr(operation='copy from an inaccessible bucket')
 @attr(assertion='fails w/AttributeError')
-@attr('Nonowner')
+@attr('Nowner')
 def test_object_copy_not_owned_bucket():
     buckets = [get_new_bucket(), get_new_bucket(targets.alt.default)]
     print repr(buckets[1])
